@@ -1,0 +1,12 @@
+﻿@model Pelicula
+
+<h1 style="color: orange">Detalles de película</h1>
+<br />
+<ul class="list-group">
+    <li class="list-group-item"><b>Id de película</b>: @Model.IdPelicula</li>
+    <li class="list-group-item"><b>Título:</b> @Model.Titulo</li>
+    <li class="list-group-item"><b>Género:</b> @Model.Genero</li>
+    <li class="list-group-item"><b>Director:</b> @Model.Director</li>
+</ul>
+<br />
+<a asp-action="Index" asp-controller="Peliculas" class="btn btn-info">Volver a lista</a>

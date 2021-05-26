@@ -1,0 +1,19 @@
+﻿@model Pelicula
+
+<h1>Crear nueva película</h1>
+
+<h4>Pelicula</h4>
+<hr />
+<form method="post">
+    <label>Id</label>
+    <input type="number" name="idpelicula" class="form-control" />
+    <label>Título</label>
+    <input type="text" name="titulo" class="form-control" />
+    <label>Género</label>
+    <input type="text" name="genero" class="form-control" />
+    <label>Director</label>
+    <input type="text" name="director" class="form-control" /><br />
+    <button type="submit" class="btn btn-success">Crear película</button>
+</form>
+<br />
+<a asp-action="Index" asp-controller="Peliculas">Volver a lista</a>

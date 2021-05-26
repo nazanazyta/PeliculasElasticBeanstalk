@@ -1,0 +1,30 @@
+﻿@model List<Pelicula>
+
+<h1 style="color: limegreen">Index de PELÍCULAS</h1>
+<br />
+<a asp-action="Create" asp-controller="Peliculas" class="btn btn-primary">Crear NUEVA película</a>
+<br /><br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Pelicula p in Model)
+        {
+            <tr>
+                <td>@p.Titulo</td>
+                <td>
+                    <a asp-action="Edit" asp-controller="Peliculas"
+                       asp-route-id="@p.IdPelicula" class="btn btn-info">Editar</a> | 
+                    <a asp-action="Details" asp-controller="Peliculas"
+                       asp-route-id="@p.IdPelicula" class="btn btn-warning">Detalles</a> | 
+                    <a asp-action="Delete" asp-controller="Peliculas"
+                       asp-route-id="@p.IdPelicula" class="btn btn-danger">Borrar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
